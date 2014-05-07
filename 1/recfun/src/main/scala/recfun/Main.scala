@@ -23,6 +23,7 @@ object Main {
    */
   def balance(chars: List[Char]): Boolean = {
     def balance(chars: List[Char], count: Int): Boolean =
+      
       if (count < 0) false
       else if (chars.isEmpty) count == 0
       else if (chars.head == ')') balance(chars.tail, count - 1)
